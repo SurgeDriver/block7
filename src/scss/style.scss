@@ -325,20 +325,6 @@ body {
   content: 'Статус ремонта';
 }
 
-.aside__phone-number {
-  display: block;
-  font-family: inherit;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32px;
-  letter-spacing: -0.6px;
-  text-align: left;
-  color: #1b1c21;
-  text-decoration: none;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
 .expand-button {
   // height: 24px;
   background-color: transparent;
@@ -449,11 +435,5 @@ body {
 
   .nav-header__buttons {
     display: flex;
-  }
-
-  .aside {
-    display: block;
-    transform: translateX(0);
-    box-shadow: none;
   }
 }

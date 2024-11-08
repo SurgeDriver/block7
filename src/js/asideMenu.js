@@ -59,10 +59,12 @@ setTimeout(() => {
   asideMenu.style.transition = 'transform 0.15s ease-in-out'
 }, 50)
 
-window.addEventListener('resize', function (event) {
+function onWinResize() {
   if (window.innerWidth >= 1440) {
     showAside()
   } else {
     hideAside()
   }
-})
+}
+onWinResize()
+window.addEventListener('resize', onWinResize)

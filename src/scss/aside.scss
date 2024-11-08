@@ -81,8 +81,30 @@
     text-decoration: none;
     margin-top: 30px;
   }
+
+  &__phone-number {
+    display: block;
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    text-align: left;
+    color: #1b1c21;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
 }
 
 .aside.modalOpen {
   transform: translateX(0);
+}
+
+@media (min-width: 1440px) {
+  .aside {
+    display: block;
+    transform: translateX(0);
+    box-shadow: none;
+  }
 }
