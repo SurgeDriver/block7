@@ -1,0 +1,111 @@
+.service {
+  padding: 16px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  &__wrapper {
+    // border: 1px solid red;
+    display: block;
+  }
+
+  &__row * {
+    // border: 1px solid green;
+  }
+
+  &__row {
+    box-sizing: border-box;
+    height: 64px;
+    display: grid;
+    grid-template-columns: minmax(210px, 1fr) 1fr minmax(100px, 1fr) 150px;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    margin: 0 auto;
+    gap: 20px;
+
+    &:nth-child(2) {
+      border-radius: 6px 6px 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 6px 6px;
+    }
+  }
+
+  &__row:not(:last-child):not(:first-child) {
+    &::after {
+      content: '';
+      width: 100%;
+      bottom: 0;
+      height: 1px;
+      position: absolute;
+      background-image: linear-gradient(
+        to right,
+        transparent 3%,
+        #eaeaea 3%,
+        #eaeaea 97%,
+        transparent 97%
+      );
+    }
+  }
+
+  &__header {
+    background-color: transparent;
+    color: #7e7e82;
+  }
+  &__header * {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__name::before,
+  &__price::before,
+  &__time::before {
+    display: block;
+    color: #7e7e7e;
+    margin-top: 10px;
+  }
+
+  &__order-button {
+    background-image: url('../icons/ArrowRight.svg');
+    background-position: 90% 50%;
+    width: 136px;
+    height: 32px;
+    text-transform: uppercase;
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .service {
+    position: relative;
+    &__name::before {
+      content: 'Ремонтные услуги';
+    }
+    &__price::before {
+      content: 'Цена';
+    }
+    &__time::before {
+      content: 'Срок';
+    }
+    &__row {
+      max-width: 295px;
+      background-image: none;
+      border-radius: 6px;
+    }
+    &__row {
+      display: block;
+      height: 200px;
+    }
+    &__header {
+      display: none;
+    }
+    &__order-button {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+}

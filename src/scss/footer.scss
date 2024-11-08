@@ -1,0 +1,118 @@
+.footerInfo {
+  width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  display: flex;
+  border-top: 1px solid #d9fff5;
+  padding-top: 15px;
+
+  &__text {
+    font-family: 'TT-Lakes Regular';
+    font-size: 14px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    text-decoration: unset;
+    color: #7e7e82;
+  }
+
+  &__text:last-child {
+    text-align: end;
+  }
+
+  &__text:nth-child(2) {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .footerInfo {
+    flex-direction: column;
+    width: 320px;
+
+    &__text {
+      width: 312px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footerInfo {
+    &__text {
+      width: 239px;
+    }
+
+    &__text:last-child {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .footerInfo {
+    width: 1120px;
+
+    &__text {
+      width: 351px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .footerInfo {
+    margin-left: 320px;
+
+    &__text:first-child {
+      margin-left: 30px;
+    }
+  }
+}
+
+.section-price {
+  &--text {
+    font-family: inherit;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+  }
+
+  &__information {
+    margin-left: 16px;
+    padding: 10px 16px;
+    &--text {
+      font-family: inherit;
+      color: black;
+      font-size: 14px;
+      max-width: 420px;
+      margin-bottom: 20px;
+    }
+  }
+  &__special {
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    font-size: 16px;
+    transition: padding 0.2s;
+    text-decoration: none;
+
+    &:hover {
+      color: grey;
+      padding-left: 5px;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: relative;
+      border: solid #ff3e79;
+      border-width: 0 2px 2px 0;
+      padding: 4px;
+      rotate: -45deg;
+      left: 8px;
+    }
+  }
+}

@@ -1,0 +1,173 @@
+$BorderColor: #eaeaea;
+$Cyan: #41f6d7;
+$LightCyan: #d9fff5;
+$Grey2: #b5b6bc;
+$Pink: #ff3e79;
+
+.form-input {
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  width: 90%;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid $BorderColor;
+  opacity: 0px;
+  padding: 0 16px;
+  margin: 16px auto;
+  box-sizing: border-box;
+}
+
+.modal-window {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 440px;
+  height: 100%;
+  background-color: white;
+  border-right: 1px solid $LightCyan;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+  z-index: 5;
+  overflow: visible;
+
+  transform: translateX(100%);
+}
+
+.modal-window.modalOpen {
+  transform: translateX(0);
+}
+
+.privacy-notice {
+  font-family: inherit;
+  font-size: 14px;
+  color: $Grey2;
+  margin-left: 30px;
+  margin-right: 30px;
+  &__highlight {
+    color: $Pink;
+  }
+}
+
+.feedback {
+  &__title {
+    font-weight: 700;
+    font-size: 27px;
+    padding: 8px 0;
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      background-image: url('../img/highlight.svg');
+      background-repeat: no-repeat;
+      display: inline-block;
+      width: 4px;
+      height: 40px;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &__form--message {
+    height: 118px;
+    max-width: 90%;
+    min-height: 80px;
+    resize: vertical;
+  }
+
+  &__button--close {
+    position: absolute;
+    display: none;
+    left: -72px;
+    top: 32px;
+  }
+
+  &__button--send {
+    background-image: url('../icons/ArrowRight.svg');
+    background-position: 90% 50%;
+    width: 136px;
+    height: 32px;
+    text-transform: uppercase;
+    display: block;
+    padding-right: 15px;
+    margin-right: 16px;
+    margin-left: auto;
+  }
+}
+
+.callback {
+  &__title {
+    font-weight: 700;
+    font-size: 27px;
+    padding: 8px 0;
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      background-image: url('../img/highlight.svg');
+      background-repeat: no-repeat;
+      position: absolute;
+      display: inline-block;
+      width: 4px;
+      height: 40px;
+
+      left: 0;
+    }
+  }
+
+  &__form--message {
+    height: 118px;
+    max-width: 90%;
+    min-height: 80px;
+    resize: vertical;
+  }
+
+  &__button--close {
+    position: absolute;
+    display: none;
+    left: -72px;
+    top: 32px;
+  }
+
+  &__button--send {
+    background-image: url('../icons/ArrowRight.svg');
+    background-position: 90% 50%;
+    width: 136px;
+    height: 32px;
+    text-transform: uppercase;
+    display: block;
+    color: white;
+    padding-right: 15px;
+    margin-right: 16px;
+    margin-left: auto;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .modal-window {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-window {
+    width: 320px;
+  }
+
+  .feedback__button--close {
+    position: relative;
+    top: 24px;
+    left: 16px;
+  }
+
+  .callback__button--close {
+    position: relative;
+    top: 24px;
+    left: 16px;
+  }
+}
