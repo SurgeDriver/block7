@@ -1,4 +1,6 @@
 import '../scss/style.scss'
+import '../scss/main.scss'
+
 import '../scss/modals.scss'
 import '../scss/swipers.scss'
 import '../scss/aside.scss'

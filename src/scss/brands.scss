@@ -1,53 +1,51 @@
 .brands {
   margin: 0 auto;
   max-width: 1120px;
-}
 
-.brands__wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(220px, 1fr));
-  padding: 12px 0;
-  margin: 0 auto;
-  max-width: 1120px;
-  gap: 16px 24px;
-  overflow: hidden;
-  transition: max-height 0.25s ease-in-out;
-}
-
-.brands__slide {
-  box-sizing: border-box;
-  height: 72px;
-  max-width: 295px;
-}
-
-.brands__button {
-  background: #ffffff url('../icons/Go.svg') no-repeat 90% 50%;
-  border: 1px solid #eaeaea;
-  border-radius: 6px;
-  padding: 16px;
-  height: 100%;
-  width: 100%;
-
-  -webkit-user-drag: none;
-  user-select: none;
-
-  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out,
-    background-position 0.1s ease-in-out;
-  display: flex;
-  align-items: center;
-  &:hover {
-    border: 1px solid #ff3e79;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    padding: 12px 0;
+    margin: 0 auto;
+    max-width: 1120px;
+    gap: 16px 24px;
+    overflow: hidden;
+    transition: max-height 0.25s ease-in-out;
   }
-  &:active {
-    transform: scale(0.95);
-    box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.15);
-    background-position: 95% 50%;
+  &__slide {
+    box-sizing: border-box;
+    height: 72px;
+    max-width: 295px;
   }
-}
+  &__button {
+    background: #ffffff url('../icons/Go.svg') no-repeat 90% 50%;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    padding: 16px;
+    height: 100%;
+    width: 100%;
 
-.brands__button--img {
-  user-select: none;
-  pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out,
+      background-position 0.1s ease-in-out;
+    display: flex;
+    align-items: center;
+    &:hover {
+      border: 1px solid #ff3e79;
+    }
+    &:active {
+      transform: scale(0.95);
+      box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.15);
+      background-position: 95% 50%;
+    }
+  }
+
+  &__button--img {
+    user-select: none;
+    pointer-events: none;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1440px) {
