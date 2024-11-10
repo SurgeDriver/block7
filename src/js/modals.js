@@ -1,7 +1,7 @@
 const modalBG = document.querySelector('.modal-bg')
 
 function createModal(openSelector, modalSelector, closeSelector) {
-  const openButton = document.querySelector(openSelector)
+  const openButtons = document.querySelectorAll(openSelector)
   const modal = document.querySelector(modalSelector)
   const closeButton = modal.querySelector(closeSelector)
 
@@ -31,7 +31,9 @@ function createModal(openSelector, modalSelector, closeSelector) {
   }
 
   //обработчики
-  openButton.addEventListener('click', showModal)
+  openButtons.forEach((button) => {
+    button.addEventListener('click', showModal)
+  })
   closeButton.addEventListener('click', hideModal)
   modalBG.addEventListener('click', hideModal)
   document.addEventListener('keydown', (event) => {
@@ -46,5 +48,13 @@ function createModal(openSelector, modalSelector, closeSelector) {
   })
 }
 
-createModal('.aside__callback-button', '.callback', '.callback__button--close')
-createModal('.aside__feedback-button', '.feedback', '.feedback__button--close')
+createModal(
+  '.aside__callback-button, .header__button--icon--callback',
+  '.callback',
+  '.callback__button--close'
+)
+createModal(
+  '.aside__feedback-button, .header__button--icon--feedback',
+  '.feedback',
+  '.feedback__button--close'
+)

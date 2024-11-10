@@ -10,7 +10,7 @@ const serviceGrid = service.querySelectorAll('.service__wrapper')
 
 function swiper_Destroy() {
   swiper.forEach((s) => {
-    s.destroy(true, false)
+    s.destroy(true, true)
     s = null
   })
   swiper = null
@@ -40,9 +40,6 @@ function onResize() {
     serviceGrid.forEach((servGrid) => {
       servGrid.classList.add('service__wrapper')
     })
-
-    brandsGrid.style.maxHeight = '160px;'
-    devicesGrid.style.maxHeight = '160px;'
   } else if (window.innerWidth <= 768 && !swiper) {
     initSwiper()
     brands.classList.remove('brands')

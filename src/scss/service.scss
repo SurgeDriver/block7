@@ -4,12 +4,7 @@
   margin: 0 auto;
 
   &__wrapper {
-    // border: 1px solid red;
     display: block;
-  }
-
-  &__row * {
-    // border: 1px solid green;
   }
 
   &__row {
@@ -64,13 +59,12 @@
   &__time::before {
     display: block;
     color: #7e7e7e;
-    margin-top: 10px;
   }
 
   &__order-button {
     background-image: url('../icons/ArrowRight.svg');
     background-position: 90% 50%;
-    width: 136px;
+    width: 120px;
     height: 32px;
     text-transform: uppercase;
     display: block;
@@ -90,14 +84,22 @@
     &__time::before {
       content: 'Срок';
     }
+
     &__row {
       max-width: 295px;
+      height: 200px;
       background-image: none;
       border-radius: 6px;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: none;
+      align-items: start;
+      gap: 0;
     }
-    &__row {
-      display: block;
-      height: 200px;
+
+    &__row:not(:last-child):not(:first-child) {
+      &::after {
+        display: none;
+      }
     }
     &__header {
       display: none;

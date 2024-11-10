@@ -10,6 +10,7 @@
     max-width: 1120px;
     gap: 16px 24px;
     overflow: hidden;
+    max-height: 160px;
     transition: max-height 0.25s ease-in-out;
   }
   &__slide {

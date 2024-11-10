@@ -13,7 +13,6 @@ const expandableBlock = {
     let expanded = false
 
     buttonText.textContent = showText
-    block.style.maxHeight = compactHeight
 
     button.addEventListener('click', () => {
       expanded = !expanded
