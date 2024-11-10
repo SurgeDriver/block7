@@ -1,15 +1,15 @@
-const brands = document.querySelector('.swiper.brands')
-const brandsGrid = brands.querySelector('.brands__wrapper')
-const devices = document.querySelector('.swiper.devices')
-const devicesGrid = devices.querySelector('.devices__wrapper')
+const brands = document.querySelector('.brands')
+const devices = document.querySelector('.devices')
 const services = document.querySelector('.service')
+
+const brandsGrid = brands.querySelector('.brands__wrapper')
+const devicesGrid = devices.querySelector('.devices__wrapper')
 const serviceGrids = services.querySelectorAll('.service__wrapper')
-// const serviceRows = services.querySelectorAll('.service__row')
 
 let swiper
 
 function swiper_Destroy() {
-  if (swiper instanceof Swiper) {
+  if (swiper) {
     swiper.destroy(true, true)
     swiper = null
   }
@@ -38,11 +38,6 @@ function onResize() {
     services.classList.add('service')
     brandsGrid.classList.add('brands__wrapper')
     devicesGrid.classList.add('devices__wrapper')
-
-    // serviceRows.forEach((servRow) => {
-    //   servRow.classList.add('service__row')
-    // })
-
     serviceGrids.forEach((servGrid) => {
       servGrid.classList.add('service__wrapper')
     })
@@ -54,11 +49,6 @@ function onResize() {
     services.classList.remove('service')
     brandsGrid.classList.remove('brands__wrapper')
     devicesGrid.classList.remove('devices__wrapper')
-
-    // serviceRows.forEach((servRow) => {
-    //   servRow.classList.remove('service__row')
-    // })
-
     serviceGrids.forEach((servGrid) => {
       servGrid.classList.remove('service__wrapper')
     })

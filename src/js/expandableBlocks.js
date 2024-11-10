@@ -1,6 +1,4 @@
-//объект с одним методом который тупа связывает раскрываемый блок и кнопку
 const expandableBlock = {
-  //метод принимает селектор блока, селектор кнопки, и компактную высоту в строчном формате
   init: function (
     blockSelector,
     buttonSelector,
@@ -28,14 +26,11 @@ const expandableBlock = {
   }
 }
 
-//раскрываемый блок и соответствующая кнопка задается тут
-//блоки разной высота, поэтому max-height в скрытом состоянии задается тут вручную
 expandableBlock.init(
   '.main__text',
   '.main__expand-button',
   '65px',
   'Читать далее'
 )
-expandableBlock.init('.brands__wrapper', '.block1-button', '160px')
-expandableBlock.init('.devices__wrapper', '.block2-button', '160px')
-// expandableBlock.init('.block3', '.block3-button', '180px')
+expandableBlock.init('.brands__wrapper', '.brands-button', '160px')
+expandableBlock.init('.devices__wrapper', '.devices-button', '160px')
